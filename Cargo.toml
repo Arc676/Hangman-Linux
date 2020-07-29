@@ -9,6 +9,7 @@ build = "src/build.rs"
 qmetaobject = "0.1.4"
 cstr = "0.1.0"
 cpp = "0.4"
+Rustic_Hangman = "0.1.0"
 
 [build-dependencies]
 cpp_build = "0.4"
