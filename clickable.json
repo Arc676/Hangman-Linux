@@ -1,0 +1,11 @@
+{
+  "clickable_minimum_required": "6.12.2",
+  "builder": "rust",
+  "kill": "hangman",
+  "install_data": {
+    "${ROOT}/manifest.json": "${INSTALL_DIR}",
+    "${ROOT}/hangman.apparmor": "${INSTALL_DIR}",
+    "${ROOT}/hangman.desktop": "${INSTALL_DIR}",
+    "${ROOT}/assets": "${INSTALL_DIR}"
+  }
+}
