@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Hangman
 Exec=hangman %U
-Icon=assets/logo.svg
+Icon=assets/hangman.png
 Terminal=false
 Type=Application
 X-Ubuntu-Touch=true
