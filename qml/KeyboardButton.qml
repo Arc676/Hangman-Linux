@@ -40,8 +40,7 @@ Rectangle {
 		id: mouseArea
 		anchors.fill: parent
 		onClicked: {
-			gameView.guess(letter)
-			kbdBtn.disable()
+			gameView.guess(kbdBtn)
 		}
 	}
 

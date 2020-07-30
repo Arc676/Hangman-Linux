@@ -69,6 +69,12 @@ struct HangmanBackend {
 			None => "".to_string().into()
 		}
 	}),
+	get_secret: qt_method!(fn get_secret(&self) -> QString {
+		match &self.game {
+			Some(game) => game.get_secret().into(),
+			None => "".to_string().into()
+		}
+	}),
 	game_ongoing: qt_method!(fn game_ongoing(&self) -> bool {
 		match &self.game {
 			Some(game) => game.game_ongoing(),

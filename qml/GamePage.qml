@@ -29,7 +29,18 @@ Page {
 		onState_changed: {
 			var stateIdx = getStateIndex()
 			hangingState.source = "states/state" + stateIdx + ".png"
-			stateLabel.text = backend.get_status().replace(/_/g, "_ ")
+			if (backend.game_ongoing()) {
+				stateLabel.text = backend.get_status().replace(/_/g, "_ ")
+			} else {
+				var feedback = ""
+				if (backend.get_attempts() < backend.get_max_attempts()) {
+					feedback = "You win!"
+				} else {
+					feedback = "Game over."
+				}
+				feedback += " The word was \"" + backend.get_secret() + "\"."
+				stateLabel.text = feedback
+			}
 		}
 	}
 
@@ -60,8 +71,11 @@ Page {
 	function newGameFromWordList() {
 	}
 
-	function guess(letter) {
-		backend.guess(letter)
+	function guess(btn) {
+		if (backend.game_ongoing()) {
+			backend.guess(btn.letter)
+			btn.disable()
+		}
 	}
 
 	Image {
