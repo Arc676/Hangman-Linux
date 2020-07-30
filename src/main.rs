@@ -35,6 +35,7 @@ struct HangmanBackend {
 		match Hangman::new(secret_word, max_attempts) {
 			Ok(game) => {
 				self.game = Some(game);
+				self.state_changed();
 				true
 			},
 			Err(_) => false
@@ -56,14 +57,16 @@ struct HangmanBackend {
 		match &mut self.game {
 			Some(game) => {
 				game.handle_guess(guess).expect("Invalid guess");
+				self.state_changed();
 			},
 			None => {}
 		}
 	}),
-	get_status: qt_method!(fn get_status(&self) -> String {
+	state_changed: qt_signal!(),
+	get_status: qt_method!(fn get_status(&self) -> QString {
 		match &self.game {
-			Some(game) => game.get_current_status().to_string(),
-			None => "".to_string()
+			Some(game) => game.get_current_status().to_string().into(),
+			None => "".to_string().into()
 		}
 	}),
 	game_ongoing: qt_method!(fn game_ongoing(&self) -> bool {

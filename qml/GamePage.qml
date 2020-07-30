@@ -26,6 +26,11 @@ Page {
 
 	HangmanBackend {
 		id: backend
+		onState_changed: {
+			var stateIdx = getStateIndex()
+			hangingState.source = "states/state" + stateIdx + ".png"
+			stateLabel.text = backend.get_status().replace(/_/g, "_ ")
+		}
 	}
 
 	Component {
@@ -44,10 +49,38 @@ Page {
 		WordErrorDialog {}
 	}
 
+	function getStateIndex() {
+		return Math.floor(backend.get_attempts() * 8 / backend.get_max_attempts())
+	}
+
 	function newGameWithWord() {
 		PopupUtils.open(inputDialog)
 	}
 
 	function newGameFromWordList() {
+	}
+
+	Image {
+		id: hangingState
+		anchors {
+			left: parent.left
+			leftMargin: margin
+			top: header.bottom
+			topMargin: margin
+			right: parent.right
+			rightMargin: margin
+		}
+		fillMode: Image.PreserveAspectFit
+		source: "states/state8.png"
+	}
+
+	Label {
+		id: stateLabel
+		anchors {
+			top: hangingState.bottom
+			bottomMargin: margin
+			horizontalCenter: parent.horizontalCenter
+		}
+		text: i18n.tr("No game in progress")
 	}
 }
