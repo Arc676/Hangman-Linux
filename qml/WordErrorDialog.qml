@@ -16,31 +16,20 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.3
+import Ubuntu.Components.Popups 1.3
 
-PageHeader {
-	id: header
-	title: i18n.tr("Hangman")
+Dialog {
+	id: dialog
+	objectName: "wordErrorDialog"
 
-	trailingActionBar {
-		actions: [
-			Action {
-				iconName: "info"
-				visible: pageViewer.depth === 1
-				text: i18n.tr("About")
-				onTriggered: pageViewer.push(Qt.resolvedUrl("About.qml"))
-			},
-			Action {
-				iconName: "add"
-				visible: pageViewer.depth === 1
-				text: i18n.tr("New game")
-				onTriggered: gameView.newGameWithWord()
-			},
-			Action {
-				iconName: "note-new"
-				visible: pageViewer.depth === 1
-				text: i18n.tr("New from word list")
-				onTriggered: gameView.newGameFromWordList()
-			}
-		]
+	title: i18n.tr("Error")
+	text: i18n.tr("Word contains invalid characters")
+
+	Button {
+		id: okBtn
+		text: i18n.tr("OK")
+		onClicked: {
+			PopupUtils.close(dialog)
+		}
 	}
 }

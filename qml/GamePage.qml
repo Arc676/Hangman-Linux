@@ -16,8 +16,38 @@
 
 import QtQuick 2.7
 import Ubuntu.Components 1.3
+import Ubuntu.Components.Popups 1.3
+
+import HangmanBackend 1.0
 
 Page {
 	id: gameView
 	header: DefaultHeader {}
+
+	HangmanBackend {
+		id: backend
+	}
+
+	Component {
+		id: inputDialog
+		WordInputDialog {
+			onStartGame: {
+				if (!backend.new_game_with_word(word, 8)) {
+					PopupUtils.open(errorDialog)
+				}
+			}
+		}
+	}
+
+	Component {
+		id: errorDialog
+		WordErrorDialog {}
+	}
+
+	function newGameWithWord() {
+		PopupUtils.open(inputDialog)
+	}
+
+	function newGameFromWordList() {
+	}
 }

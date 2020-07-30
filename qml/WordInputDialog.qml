@@ -16,31 +16,35 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.3
+import Ubuntu.Components.Popups 1.3
 
-PageHeader {
-	id: header
-	title: i18n.tr("Hangman")
+Dialog {
+	id: dialog
+	objectName: "inputDialog"
 
-	trailingActionBar {
-		actions: [
-			Action {
-				iconName: "info"
-				visible: pageViewer.depth === 1
-				text: i18n.tr("About")
-				onTriggered: pageViewer.push(Qt.resolvedUrl("About.qml"))
-			},
-			Action {
-				iconName: "add"
-				visible: pageViewer.depth === 1
-				text: i18n.tr("New game")
-				onTriggered: gameView.newGameWithWord()
-			},
-			Action {
-				iconName: "note-new"
-				visible: pageViewer.depth === 1
-				text: i18n.tr("New from word list")
-				onTriggered: gameView.newGameFromWordList()
-			}
-		]
+	signal startGame(string word)
+
+	title: i18n.tr("New Game")
+	text: i18n.tr("Enter secret word")
+
+	TextField {
+		id: wordField
+	}
+
+	Button {
+		id: confirm
+		text: i18n.tr("Start game")
+		onClicked: {
+			dialog.startGame(wordField.text)
+			PopupUtils.close(dialog)
+		}
+	}
+
+	Button {
+		id: cancel
+		text: i18n.tr("Cancel")
+		onClicked: {
+			PopupUtils.close(dialog)
+		}
 	}
 }

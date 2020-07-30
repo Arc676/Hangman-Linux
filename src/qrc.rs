@@ -4,6 +4,8 @@ qrc!(qml_resources,
 		"qml/About.qml",
 		"qml/DefaultHeader.qml",
 		"qml/GamePage.qml",
+		"qml/WordInputDialog.qml",
+		"qml/WordErrorDialog.qml",
 		"qml/WrappingLabel.qml"
 	},
 );
