@@ -15,32 +15,9 @@
  */
 
 import QtQuick 2.7
-import QtQuick.Controls 2.2
 import Ubuntu.Components 1.3
-import QtQuick.Layouts 1.3
-import Qt.labs.settings 1.0
 
-ApplicationWindow {
-	id: root
-	objectName: 'mainView'
-
-	width: units.gu(45)
-	height: units.gu(75)
-	visible: true
-
-	property real margin: units.gu(2)
-
-	PageStack {
-		id: pageViewer
-		anchors.fill: parent
-
-		property GamePage gamePage: GamePage {
-			visible: false
-		}
-
-		Component.onCompleted: {
-			pageViewer.clear()
-			pageViewer.push(gamePage)
-		}
-	}
+Page {
+	id: gameView
+	header: DefaultHeader {}
 }
