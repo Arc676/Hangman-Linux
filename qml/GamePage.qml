@@ -60,6 +60,10 @@ Page {
 	function newGameFromWordList() {
 	}
 
+	function guess(letter) {
+		backend.guess(letter)
+	}
+
 	Image {
 		id: hangingState
 		anchors {
@@ -82,5 +86,33 @@ Page {
 			horizontalCenter: parent.horizontalCenter
 		}
 		text: i18n.tr("No game in progress")
+	}
+
+	Column {
+		anchors {
+			top: stateLabel.bottom
+			topMargin: margin
+			left: parent.left
+			leftMargin: margin
+			right: parent.right
+			rightMargin: margin
+		}
+
+		Repeater {
+			model: [
+				["A", "B", "C", "D", "E", "F", "G", "H", "I"],
+				["J", "K", "L", "M", "N", "O", "P", "Q", "R"],
+				["S", "T", "U", "V", "W", "X", "Y", "Z"]
+			]
+			Row {
+				Repeater {
+					model: modelData
+					KeyboardButton {
+						buttonText: modelData
+						letter: modelData.toLowerCase()
+					}
+				}
+			}
+		}
 	}
 }
