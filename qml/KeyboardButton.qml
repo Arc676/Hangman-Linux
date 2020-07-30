@@ -26,6 +26,11 @@ Rectangle {
 	height: btnLbl.height + 2 * margin
 	color: Suru.backgroundColor
 
+	Connections {
+		target: gameView
+		onResetButtons: kbdBtn.enable()
+	}
+
 	function enable() {
 		kbdBtn.color = Suru.backgroundColor
 		mouseArea.enabled = true

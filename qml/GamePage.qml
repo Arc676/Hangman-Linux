@@ -24,6 +24,8 @@ Page {
 	id: gameView
 	header: DefaultHeader {}
 
+	signal resetButtons()
+
 	HangmanBackend {
 		id: backend
 		onState_changed: {
@@ -50,6 +52,8 @@ Page {
 			onStartGame: {
 				if (!backend.new_game_with_word(word, 8)) {
 					PopupUtils.open(errorDialog)
+				} else {
+					gameView.resetButtons()
 				}
 			}
 		}
