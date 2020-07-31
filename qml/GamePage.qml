@@ -50,18 +50,27 @@ Page {
 		id: inputDialog
 		WordInputDialog {
 			onStartGame: {
-				if (!backend.new_game_with_word(word, 8)) {
-					PopupUtils.open(errorDialog)
-				} else {
+				if (backend.new_game_with_word(word, 8)) {
 					gameView.resetButtons()
+				} else {
+					PopupUtils.open(wordErrorDialog)
 				}
 			}
 		}
 	}
 
 	Component {
-		id: errorDialog
-		WordErrorDialog {}
+		id: wordErrorDialog
+		ErrorDialog {
+			error: i18n.tr("Word contains invalid characters")
+		}
+	}
+
+	Component {
+		id: gameErrorDialog
+		ErrorDialog {
+			error: i18n.tr("Oops. Something went wrong creating the game.")
+		}
 	}
 
 	function getStateIndex() {
@@ -73,6 +82,11 @@ Page {
 	}
 
 	function newGameFromWordList() {
+		if (backend.new_game_from_word_list("wordlists/2of12.txt", 8)) {
+			gameView.resetButtons()
+		} else {
+			PopupUtils.open(gameErrorDialog)
+		}
 	}
 
 	function guess(btn) {

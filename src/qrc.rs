@@ -15,7 +15,7 @@ qrc!(qml_resources,
 		"qml/GamePage.qml",
 		"qml/KeyboardButton.qml",
 		"qml/WordInputDialog.qml",
-		"qml/WordErrorDialog.qml",
+		"qml/ErrorDialog.qml",
 		"qml/WrappingLabel.qml"
 	},
 );

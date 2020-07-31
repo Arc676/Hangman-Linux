@@ -23,6 +23,8 @@ extern crate qmetaobject;
 
 use qmetaobject::*;
 
+use std::path::Path;
+
 use hangman::hangman::Hangman;
 
 mod qrc;
@@ -33,6 +35,16 @@ struct HangmanBackend {
 	game: Option<Hangman>,
 	new_game_with_word: qt_method!(fn new_game_with_word(&mut self, secret_word: String, max_attempts: u32) -> bool {
 		match Hangman::new(secret_word, max_attempts) {
+			Ok(game) => {
+				self.game = Some(game);
+				self.state_changed();
+				true
+			},
+			Err(_) => false
+		}
+	}),
+	new_game_from_word_list: qt_method!(fn new_game_from_word_list(&mut self, list: String, max_attempts: u32) -> bool {
+		match Hangman::new_from_word_list(Path::new(&list), max_attempts) {
 			Ok(game) => {
 				self.game = Some(game);
 				self.state_changed();

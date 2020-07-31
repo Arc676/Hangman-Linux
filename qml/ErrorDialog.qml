@@ -20,10 +20,12 @@ import Ubuntu.Components.Popups 1.3
 
 Dialog {
 	id: dialog
-	objectName: "wordErrorDialog"
+	objectName: "errorDialog"
+
+	property string error
 
 	title: i18n.tr("Error")
-	text: i18n.tr("Word contains invalid characters")
+	text: error
 
 	Button {
 		id: okBtn
