@@ -30,6 +30,12 @@ PageHeader {
 				onTriggered: pageViewer.push(Qt.resolvedUrl("About.qml"))
 			},
 			Action {
+				iconName: "settings"
+				visible: pageViewer.depth === 1
+				text: i18n.tr("Settings")
+				onTriggered: pageViewer.push(pageViewer.settingsPage)
+			},
+			Action {
 				iconName: "add"
 				visible: pageViewer.depth === 1
 				text: i18n.tr("New game")

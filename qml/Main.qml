@@ -38,6 +38,10 @@ ApplicationWindow {
 			visible: false
 		}
 
+		property SettingsPage settingsPage: SettingsPage {
+			visible: false
+		}
+
 		Component.onCompleted: {
 			pageViewer.clear()
 			pageViewer.push(gamePage)

@@ -33,6 +33,9 @@ Page {
 			hangingState.source = "states/state" + stateIdx + ".png"
 			if (backend.game_ongoing()) {
 				stateLabel.text = backend.get_status().replace(/_/g, "_ ")
+				if (backend.get_max_attempts() != 8) {
+					stateLabel.text += "  (" + (backend.get_max_attempts() - backend.get_attempts()) + " attempts remaining)"
+				}
 			} else {
 				var feedback = ""
 				if (backend.get_attempts() < backend.get_max_attempts()) {
@@ -50,7 +53,8 @@ Page {
 		id: inputDialog
 		WordInputDialog {
 			onStartGame: {
-				if (backend.new_game_with_word(word, 8)) {
+				var attempts = pageViewer.settingsPage.getAttempts()
+				if (backend.new_game_with_word(word, attempts)) {
 					gameView.resetButtons()
 				} else {
 					PopupUtils.open(wordErrorDialog)
@@ -82,7 +86,8 @@ Page {
 	}
 
 	function newGameFromWordList() {
-		if (backend.new_game_from_word_list("wordlists/2of12.txt", 8)) {
+		var attempts = pageViewer.settingsPage.getAttempts()
+		if (backend.new_game_from_word_list(pageViewer.settingsPage.wordlist, attempts)) {
 			gameView.resetButtons()
 		} else {
 			PopupUtils.open(gameErrorDialog)
