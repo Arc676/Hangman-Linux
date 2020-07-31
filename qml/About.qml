@@ -62,6 +62,15 @@ Page {
 			WrappingLabel {
 				text: i18n.tr("Application icon and hangman states adapted from <a href='https://www.flaticon.com/free-icon/hangman-game_2241186?term=hangman&page=1&position=6'>this image</a> by <a href='https://www.flaticon.com/authors/smalllikeart'>smalllikeart</a> on <a href='https://www.flaticon.com/'>flaticon</a>. Modifications by Arc676/Alessandro Vinciguerra.")
 			}
+
+			WrappingLabel {
+				text: i18n.tr("Word Lists")
+				textSize: Label.Large
+			}
+
+			WrappingLabel {
+				text: i18n.tr("US English word list <a href='http://wordlist.aspell.net/12dicts/'>2of12</a> compiled by Alan Beale and released into the public domain.")
+			}
 		}
 	}
 }
