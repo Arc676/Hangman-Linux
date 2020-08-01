@@ -126,13 +126,12 @@ Page {
 	}
 
 	Column {
+		id: controlCol
 		anchors {
 			top: stateLabel.bottom
 			topMargin: margin
 			left: parent.left
-			leftMargin: margin
 			right: parent.right
-			rightMargin: margin
 		}
 
 		Repeater {
@@ -142,11 +141,13 @@ Page {
 				["S", "T", "U", "V", "W", "X", "Y", "Z"]
 			]
 			Row {
+				property var btnWidth: root.width / modelData.length
 				Repeater {
 					model: modelData
 					KeyboardButton {
 						buttonText: modelData
 						letter: modelData.toLowerCase()
+						width: btnWidth
 					}
 				}
 			}

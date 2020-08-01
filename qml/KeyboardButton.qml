@@ -22,7 +22,6 @@ Rectangle {
 	id: kbdBtn
 	property var buttonText
 	property var letter
-	width: btnLbl.width + 2 * margin
 	height: btnLbl.height + 2 * margin
 	color: Suru.backgroundColor
 
