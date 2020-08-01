@@ -24,6 +24,8 @@ Page {
 	id: gameView
 	header: DefaultHeader {}
 
+	property bool isLandscape: root.width > root.height
+
 	signal resetButtons()
 
 	HangmanBackend {
@@ -108,8 +110,8 @@ Page {
 			leftMargin: margin
 			top: header.bottom
 			topMargin: margin
-			right: parent.right
-			rightMargin: margin
+			right: isLandscape ? parent.horizontalCenter : parent.right
+			rightMargin: isLandscape ? 0 : margin
 		}
 		fillMode: Image.PreserveAspectFit
 		source: "states/state8.png"
@@ -120,7 +122,7 @@ Page {
 		anchors {
 			top: hangingState.bottom
 			bottomMargin: margin
-			horizontalCenter: parent.horizontalCenter
+			horizontalCenter: hangingState.horizontalCenter
 		}
 		text: i18n.tr("No game in progress")
 	}
@@ -128,9 +130,9 @@ Page {
 	Column {
 		id: controlCol
 		anchors {
-			top: stateLabel.bottom
+			top: (isLandscape ? header : stateLabel).bottom
 			topMargin: margin
-			left: parent.left
+			left: isLandscape ? hangingState.right : parent.left
 			right: parent.right
 		}
 
@@ -141,7 +143,7 @@ Page {
 				["S", "T", "U", "V", "W", "X", "Y", "Z"]
 			]
 			Row {
-				property var btnWidth: root.width / modelData.length
+				property var btnWidth: root.width / (isLandscape ? 2 : 1)  / modelData.length
 				Repeater {
 					model: modelData
 					KeyboardButton {
