@@ -79,6 +79,13 @@ Page {
 		}
 	}
 
+	Component {
+		id: emptyImportDialog
+		ErrorDialog {
+			error: i18n.tr("Please import a word list or use one of the provided lists.")
+		}
+	}
+
 	function getStateIndex() {
 		return Math.floor(backend.get_attempts() * 8 / backend.get_max_attempts())
 	}
@@ -89,10 +96,15 @@ Page {
 
 	function newGameFromWordList() {
 		var attempts = pageViewer.settingsPage.getAttempts()
-		if (backend.new_game_from_word_list(pageViewer.settingsPage.wordlist, attempts)) {
-			gameView.resetButtons()
+		var wordlist = pageViewer.settingsPage.wordlist
+		if (wordlist.length == 0) {
+			PopupUtils.open(emptyImportDialog)
 		} else {
-			PopupUtils.open(gameErrorDialog)
+			if (backend.new_game_from_word_list(wordlist, attempts)) {
+				gameView.resetButtons()
+			} else {
+				PopupUtils.open(gameErrorDialog)
+			}
 		}
 	}
 
