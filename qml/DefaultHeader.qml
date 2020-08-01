@@ -24,16 +24,10 @@ PageHeader {
 	trailingActionBar {
 		actions: [
 			Action {
-				iconName: "info"
+				iconName: "note-new"
 				visible: pageViewer.depth === 1
-				text: i18n.tr("About")
-				onTriggered: pageViewer.push(Qt.resolvedUrl("About.qml"))
-			},
-			Action {
-				iconName: "settings"
-				visible: pageViewer.depth === 1
-				text: i18n.tr("Settings")
-				onTriggered: pageViewer.push(pageViewer.settingsPage)
+				text: i18n.tr("New from word list")
+				onTriggered: gameView.newGameFromWordList()
 			},
 			Action {
 				iconName: "add"
@@ -42,10 +36,16 @@ PageHeader {
 				onTriggered: gameView.newGameWithWord()
 			},
 			Action {
-				iconName: "note-new"
+				iconName: "settings"
 				visible: pageViewer.depth === 1
-				text: i18n.tr("New from word list")
-				onTriggered: gameView.newGameFromWordList()
+				text: i18n.tr("Settings")
+				onTriggered: pageViewer.push(pageViewer.settingsPage)
+			},
+			Action {
+				iconName: "info"
+				visible: pageViewer.depth === 1
+				text: i18n.tr("About")
+				onTriggered: pageViewer.push(Qt.resolvedUrl("About.qml"))
 			}
 		]
 	}
