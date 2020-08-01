@@ -24,6 +24,17 @@ Page {
 	header: DefaultHeader {}
 
 	property string wordlist: "wordlists/2of12.txt"
+	property string lastImportedURL: ""
+	property ImportPage importView: ImportPage {
+		visible: false
+	}
+
+	Component.onCompleted: console.log(StandardPaths.writeableLocation(StandardPaths.CacheLocation))
+
+	Connections {
+		target: importView
+		onImported: wordlist = lastImportedURL = url.replace("file://", "")
+	}
 
 	function getAttempts() {
 		return parseInt(maxAttempts.text)
@@ -55,7 +66,7 @@ Page {
 			}
 		}
 
-		Label {
+		WrappingLabel {
 			text: i18n.tr("(Note that the number of graphically displayable Hangman states is always 8.)")
 		}
 
@@ -63,6 +74,13 @@ Page {
 			id: useProvidedList
 			text: i18n.tr("Use provided word list")
 			checked: true
+			onClicked: {
+				if (checked) {
+					settings.wordlist = listSelector.paths[listSelector.selectedIndex]
+				} else {
+					settings.wordlist = settings.lastImportedURL
+				}
+			}
 		}
 
 		ListItem.ItemSelector {
@@ -97,7 +115,13 @@ Page {
 			Button {
 				id: importBtn
 				text: i18n.tr("Import...")
+				onClicked: pageViewer.push(importView)
 			}
+		}
+
+		WrappingLabel {
+			visible: !useProvidedList.checked
+			text: i18n.tr("Imported file: ") + lastImportedURL.split("/").slice(-1)[0]
 		}
 	}
 }

@@ -6,6 +6,7 @@
     "hooks": {
         "hangman": {
             "apparmor": "hangman.apparmor",
+            "content-hub": "hangman-content.json",
             "desktop":  "hangman.desktop"
         }
     },
