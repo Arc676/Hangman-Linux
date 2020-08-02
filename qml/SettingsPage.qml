@@ -104,21 +104,12 @@ Page {
 			onDelegateClicked: settings.wordlist = listSelector.paths[index]
 		}
 
-		Row {
-			spacing: margin
+		Button {
+			id: importBtn
+			width: parent.width
 			visible: !useProvidedList.checked
-
-			Label {
-				id: importedPath
-				text: i18n.tr("Import a newline separated word list")
-				anchors.verticalCenter: importBtn.verticalCenter
-			}
-
-			Button {
-				id: importBtn
-				text: i18n.tr("Import...")
-				onClicked: pageViewer.push(importView)
-			}
+			text: i18n.tr("Import a newline separated word list...")
+			onClicked: pageViewer.push(importView)
 		}
 
 		WrappingLabel {
