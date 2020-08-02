@@ -75,6 +75,10 @@ Page {
 			WrappingLabel {
 				text: i18n.tr("Elements of the periodic table (until 118 Oganesson) in US spelling compiled by Arc676/Alessandro Vinciguerra available under <a href='https://creativecommons.org/share-your-work/public-domain/cc0/'>CC0</a>.")
 			}
+
+			WrappingLabel {
+				text: i18n.tr("One word country names obtained from <a href='https://textlists.info/geography/countries-of-the-world/'>TextLISTS</a>'s list of all countries. The list is available for free for personal or commercial use. Countries with spaces and special characters were removed for compatibility reasons.")
+			}
 		}
 	}
 }
