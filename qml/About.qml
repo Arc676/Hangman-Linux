@@ -71,6 +71,10 @@ Page {
 			WrappingLabel {
 				text: i18n.tr("US English word list <a href='http://wordlist.aspell.net/12dicts/'>2of12</a> compiled by Alan Beale and released into the public domain.")
 			}
+
+			WrappingLabel {
+				text: i18n.tr("Elements of the periodic table (until 118 Oganesson) in US spelling compiled by Arc676/Alessandro Vinciguerra available under <a href='https://creativecommons.org/share-your-work/public-domain/cc0/'>CC0</a>.")
+			}
 		}
 	}
 }

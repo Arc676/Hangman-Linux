@@ -94,9 +94,11 @@ Page {
 			}
 			property var paths: [
 				"wordlists/2of12.txt",
+				"wordlists/elements.txt",
 			]
 			model: [
 				"Alan Beale's US English 2of12",
+				"Elements of the Periodic Table (US)",
 			]
 			expanded: false
 			onDelegateClicked: settings.wordlist = listSelector.paths[index]
