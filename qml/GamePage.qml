@@ -75,7 +75,7 @@ Page {
 	Component {
 		id: gameErrorDialog
 		ErrorDialog {
-			error: i18n.tr("Oops. Something went wrong creating the game.")
+			error: i18n.tr("An error occurred while creating the game.")
 		}
 	}
 
