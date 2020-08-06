@@ -15,19 +15,113 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 extern crate cpp_build;
 use std::process::Command;
 
-fn qmake_query(var: &str) -> String {
+use std::env;
+use std::fs;
+use std::path::PathBuf;
+
+fn qmake_query(qmake: &str, args: &str, var: &str) -> String {
+    let mut qmake_cmd_list: Vec<&str> = qmake.split(' ').collect();
+    qmake_cmd_list.push("-query");
+    qmake_cmd_list.push(var);
+    if !args.is_empty() {
+        let mut qmake_args_list: Vec<&str> = args.split(' ').collect();
+        qmake_cmd_list.append(&mut qmake_args_list);
+    }
     String::from_utf8(
-        Command::new("qmake")
-            .args(&["-query", var])
+        Command::new(qmake_cmd_list[0])
+            .args(&qmake_cmd_list[1..])
             .output()
             .expect("Failed to execute qmake. Make sure 'qmake' is in your path")
             .stdout,
-    ).expect("UTF-8 conversion failed")
+    )
+    .expect("UTF-8 conversion failed")
+}
+
+fn env_var(key: &str) -> Result<String, env::VarError> {
+    Ok(String::from(env::var(key)?))
+}
+
+fn qmake_call() -> String {
+    env_var("QMAKE").unwrap_or(String::from("qmake"))
+}
+
+fn qmake_args() -> String {
+    env_var("QMAKE_ARGS").unwrap_or(String::new())
+}
+
+/// Generate gettext translation files
+fn gettext() {
+    let pot_file = "po/hangman.arc676.pot";
+    let source_files = source_files();
+
+    let mut child = Command::new("xgettext")
+        .args(&[
+            &format!("--output={}", pot_file),
+            "--language=javascript",
+            "--qt",
+            "--keyword=tr",
+            "--keyword=tr:1,2",
+            "--add-comments=i18n",
+        ])
+        .args(&source_files)
+        .spawn()
+        .unwrap();
+
+    let exit_status = child.wait().unwrap();
+    assert!(exit_status.code() == Some(0));
+
+    for po_file in po_files() {
+        let mut child = Command::new("msgmerge")
+            .args(&["--update", &po_file.to_str().unwrap(), pot_file])
+            .spawn()
+            .unwrap();
+
+        let exit_status = child.wait().unwrap();
+        assert!(exit_status.code() == Some(0));
+
+        let mo_dir = format!(
+            "share/locale/{}/LC_MESSAGES",
+            po_file.file_stem().unwrap().to_str().unwrap()
+        );
+        fs::create_dir_all(&mo_dir).unwrap();
+
+        let mo_file = format!("{}/hangman.arc676.mo", mo_dir);
+
+        let mut child = Command::new("msgfmt")
+            .args(&[&po_file.to_str().unwrap(), "-o", &mo_file])
+            .spawn()
+            .unwrap();
+
+        let exit_status = child.wait().unwrap();
+        assert!(exit_status.code() == Some(0));
+    }
+}
+
+fn source_files() -> Vec<PathBuf> {
+    fs::read_dir("qml")
+        .unwrap()
+        .filter_map(|e| e.ok())
+        .filter_map(|e| if e.file_type().unwrap().is_file() { Some(e.path()) } else { None })
+        .collect()
+}
+
+fn po_files() -> Vec<PathBuf> {
+    fs::read_dir("po")
+        .unwrap()
+        .filter_map(|e| e.ok())
+        .map(|e| e.path())
+        .filter(|p| p.extension().map(|ext| ext == "po").unwrap_or(false))
+        .collect()
 }
 
 fn main() {
-    let qt_include_path = qmake_query("QT_INSTALL_HEADERS");
-    let qt_library_path = qmake_query("QT_INSTALL_LIBS");
+    gettext();
+
+    let qmake_cmd = qmake_call();
+    let args = qmake_args();
+
+    let qt_include_path = qmake_query(&qmake_cmd, &args, "QT_INSTALL_HEADERS");
+    let qt_library_path = qmake_query(&qmake_cmd, &args, "QT_INSTALL_LIBS");
 
     cpp_build::Config::new()
         .include(qt_include_path.trim())

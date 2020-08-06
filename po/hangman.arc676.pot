@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 18:30+0000\n"
+"POT-Creation-Date: 2020-08-06 19:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,67 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: qml/WordInputDialog.qml:27
+msgid "New Game"
+msgstr ""
+
+#: qml/WordInputDialog.qml:28
+msgid "Enter secret word"
+msgstr ""
+
+#: qml/WordInputDialog.qml:36
+msgid "Start game"
+msgstr ""
+
+#: qml/WordInputDialog.qml:45
+msgid "Cancel"
+msgstr ""
+
+#: qml/SettingsPage.qml:59
+msgid "Maximum attempts"
+msgstr ""
+
+#: qml/SettingsPage.qml:71
+msgid ""
+"(Note that the number of graphically displayable Hangman states is always 8.)"
+msgstr ""
+
+#: qml/SettingsPage.qml:76
+msgid "Use provided word list"
+msgstr ""
+
+#: qml/SettingsPage.qml:114
+msgid "Import a newline separated word list..."
+msgstr ""
+
+#: qml/SettingsPage.qml:120
+msgid "Imported file: "
+msgstr ""
+
+#: qml/GamePage.qml:71
+msgid "Word contains invalid characters"
+msgstr ""
+
+#: qml/GamePage.qml:78
+msgid "An error occurred while creating the game."
+msgstr ""
+
+#: qml/GamePage.qml:85
+msgid "Please import a word list or use one of the provided lists."
+msgstr ""
+
+#: qml/GamePage.qml:139
+msgid "No game in progress"
+msgstr ""
+
+#: qml/ErrorDialog.qml:27
+msgid "Error"
+msgstr ""
+
+#: qml/ErrorDialog.qml:32
+msgid "OK"
+msgstr ""
 
 #: qml/About.qml:42
 msgid "written by Arc676/Alessandro Vinciguerra. Project available under"
@@ -83,6 +144,10 @@ msgid ""
 "with spaces and special characters were removed for compatibility reasons."
 msgstr ""
 
+#: qml/ImportPage.qml:24
+msgid "Import Word List From..."
+msgstr ""
+
 #: qml/DefaultHeader.qml:22
 msgid "Hangman"
 msgstr ""
@@ -101,69 +166,4 @@ msgstr ""
 
 #: qml/DefaultHeader.qml:47
 msgid "About"
-msgstr ""
-
-#: qml/ErrorDialog.qml:27
-msgid "Error"
-msgstr ""
-
-#: qml/ErrorDialog.qml:32
-msgid "OK"
-msgstr ""
-
-#: qml/GamePage.qml:71
-msgid "Word contains invalid characters"
-msgstr ""
-
-#: qml/GamePage.qml:78
-msgid "An error occurred while creating the game."
-msgstr ""
-
-#: qml/GamePage.qml:85
-msgid "Please import a word list or use one of the provided lists."
-msgstr ""
-
-#: qml/GamePage.qml:139
-msgid "No game in progress"
-msgstr ""
-
-#: qml/ImportPage.qml:23
-msgid "Import Word List From..."
-msgstr ""
-
-#: qml/SettingsPage.qml:58
-msgid "Maximum attempts"
-msgstr ""
-
-#: qml/SettingsPage.qml:70
-msgid ""
-"(Note that the number of graphically displayable Hangman states is always 8.)"
-msgstr ""
-
-#: qml/SettingsPage.qml:75
-msgid "Use provided word list"
-msgstr ""
-
-#: qml/SettingsPage.qml:113
-msgid "Import a newline separated word list..."
-msgstr ""
-
-#: qml/SettingsPage.qml:119
-msgid "Imported file: "
-msgstr ""
-
-#: qml/WordInputDialog.qml:27
-msgid "New Game"
-msgstr ""
-
-#: qml/WordInputDialog.qml:28
-msgid "Enter secret word"
-msgstr ""
-
-#: qml/WordInputDialog.qml:36
-msgid "Start game"
-msgstr ""
-
-#: qml/WordInputDialog.qml:45
-msgid "Cancel"
 msgstr ""

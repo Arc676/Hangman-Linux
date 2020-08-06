@@ -24,8 +24,12 @@ extern crate qmetaobject;
 use qmetaobject::*;
 
 use std::path::Path;
+use std::env;
+use std::path::PathBuf;
 
 use hangman::hangman::Hangman;
+
+use gettextrs::{bindtextdomain, textdomain};
 
 mod qrc;
 
@@ -95,7 +99,24 @@ struct HangmanBackend {
 	})
 }
 
+fn init_gettext() {
+	let domain = "hangman.arc676";
+	textdomain(domain);
+
+	let app_dir = env::var("APP_DIR").expect("Failed to read the APP_DIR environment variable");
+
+	let mut app_dir_path = PathBuf::from(app_dir);
+	if !app_dir_path.is_absolute() {
+		app_dir_path = PathBuf::from("/usr");
+	}
+
+	let path = app_dir_path.join("share/locale");
+
+	bindtextdomain(domain, path.to_str().unwrap());
+}
+
 fn main() {
+	init_gettext();
 	unsafe {
 		cpp! { {
 			#include <QtCore/QCoreApplication>
