@@ -20,7 +20,9 @@ import Ubuntu.Content 1.3
 
 Page {
 	id: importView
-	title: i18n.tr("Import Word List From...")
+	header: PageHeader{
+		title: i18n.tr("Import Word List From...")
+	}
 
 	property var url
 	property var activeTransfer

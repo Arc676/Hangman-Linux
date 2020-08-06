@@ -29,14 +29,15 @@ Page {
 		visible: false
 	}
 
-	Component.onCompleted: console.log(StandardPaths.writeableLocation(StandardPaths.CacheLocation))
-
 	Connections {
 		target: importView
 		onImported: wordlist = lastImportedURL = url.replace("file://", "")
 	}
 
 	function getAttempts() {
+		if (maxAttempts.text.length <= 0) {
+			return 8
+		}
 		return parseInt(maxAttempts.text)
 	}
 
