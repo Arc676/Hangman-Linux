@@ -17,6 +17,7 @@ use std::process::Command;
 
 use std::env;
 use std::fs;
+use std::fs::DirEntry;
 use std::path::PathBuf;
 
 fn qmake_query(qmake: &str, args: &str, var: &str) -> String {
@@ -97,12 +98,37 @@ fn gettext() {
     }
 }
 
+/// Obtains a list of all QML files
 fn source_files() -> Vec<PathBuf> {
-    fs::read_dir("qml")
+    // Directory in which to search for QML files
+    walk_dir(PathBuf::from("qml"), "qml")
+}
+
+/// Recursively searches for files in a directory and
+/// returns a list of paths to the files
+fn walk_dir<T>(dir: PathBuf, ext: T) -> Vec<PathBuf>
+    where T: AsRef<str>{
+    let extension = ext.as_ref().to_string();
+    let mut files: Vec<PathBuf> = Vec::new();
+    let entries: Vec<DirEntry> = fs::read_dir(dir)
         .unwrap()
         .filter_map(|e| e.ok())
-        .filter_map(|e| if e.file_type().unwrap().is_file() { Some(e.path()) } else { None })
-        .collect()
+        .collect();
+    for entry in entries.iter() {
+        if entry.file_type().unwrap().is_dir() {
+            files.append(&mut walk_dir(entry.path(), &extension));
+        } else {
+            match entry.path().extension() {
+                Some(file_ext) => {
+                    if file_ext.to_str().unwrap().to_string() == extension {
+                        files.push(entry.path())
+                    }
+                },
+                None => {}
+            }
+        }
+    }
+    files
 }
 
 fn po_files() -> Vec<PathBuf> {
