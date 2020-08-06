@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-06 19:23+0000\n"
+"POT-Creation-Date: 2020-08-07 07:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,11 +46,17 @@ msgstr ""
 msgid "Use provided word list"
 msgstr ""
 
-#: qml/SettingsPage.qml:114
-msgid "Import a newline separated word list..."
+#: qml/SettingsPage.qml:112
+msgid ""
+"Word lists must be a newline-separated list of words. There should be no "
+"trailing newline."
 msgstr ""
 
-#: qml/SettingsPage.qml:120
+#: qml/SettingsPage.qml:119
+msgid "Import word list..."
+msgstr ""
+
+#: qml/SettingsPage.qml:125
 msgid "Imported file: "
 msgstr ""
 

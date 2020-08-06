@@ -107,11 +107,16 @@ Page {
 			onDelegateClicked: settings.wordlist = listSelector.paths[index]
 		}
 
+		WrappingLabel {
+			visible: !useProvidedList.checked
+			text: i18n.tr("Word lists must be a newline-separated list of words. There should be no trailing newline.")
+		}
+
 		Button {
 			id: importBtn
 			width: parent.width
 			visible: !useProvidedList.checked
-			text: i18n.tr("Import a newline separated word list...")
+			text: i18n.tr("Import word list...")
 			onClicked: pageViewer.push(importView)
 		}
 

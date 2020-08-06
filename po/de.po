@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hangman.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-06 19:13+0000\n"
+"POT-Creation-Date: 2020-08-06 21:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Arc676\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,11 +49,19 @@ msgstr ""
 msgid "Use provided word list"
 msgstr "Vorgegebene Wortliste verwenden"
 
-#: qml/SettingsPage.qml:114
-msgid "Import a newline separated word list..."
-msgstr "Liste von durch neue Zeilen getrennten Wörtern importieren..."
+#: qml/SettingsPage.qml:112
+msgid ""
+"Word lists must be a newline-separated list of words. There should be no "
+"trailing newline."
+msgstr "Wortlisten müssen eine Liste von durch neue Zeilen getrennten Wörtern sein. Es sollte keine neue "
+"Zeile am Ende geben."
 
-#: qml/SettingsPage.qml:120
+#: qml/SettingsPage.qml:119
+#, fuzzy
+msgid "Import word list..."
+msgstr "Wortliste Importieren Aus..."
+
+#: qml/SettingsPage.qml:125
 msgid "Imported file: "
 msgstr "Importierte Datei: "
 
@@ -67,8 +75,7 @@ msgstr "Spielerzeugung ist fehlgeschlagen."
 
 #: qml/GamePage.qml:85
 msgid "Please import a word list or use one of the provided lists."
-msgstr ""
-"Bitte eine Wortliste importieren oder eine vorgegebene Liste verwenden"
+msgstr "Bitte eine Wortliste importieren oder eine vorgegebene Liste verwenden"
 
 #: qml/GamePage.qml:139
 msgid "No game in progress"
@@ -84,7 +91,7 @@ msgstr "OK"
 
 #: qml/About.qml:42
 msgid "written by Arc676/Alessandro Vinciguerra. Project available under"
-msgstr ""
+msgstr "Programmierung von Arc676/Alessandro Vinciguerra. Projekt verfügbar unter"
 
 #: qml/About.qml:46
 msgid ""
@@ -92,6 +99,9 @@ msgid ""
 "under the terms of the GNU General Public License as published by the Free "
 "Software Foundation (version 3)."
 msgstr ""
+"Dieses Programm ist freie Software: du kannst es verteilen und/oder "
+"modifizieren nach den Regeln der GNU Public License wie von der Free "
+"Software Foundation (Version 3) veröffentlicht."
 
 #: qml/About.qml:50
 msgid ""
@@ -100,6 +110,10 @@ msgid ""
 "FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for "
 "more details."
 msgstr ""
+"Dieses Programm entstand in der Hoffnung, dass es nützlich ist, aber OHNE "
+"JEDE GARANTIE; nicht einmal implizierte Garantien für GEBRAUCHSFÄHIGKEIT "
+"oder EINE SPEZIELLE ANWENDBARKEIT. Für mehr Details lies bitte die GNU "
+"General Public License."
 
 #: qml/About.qml:54
 msgid ""
@@ -107,12 +121,17 @@ msgid ""
 "Hangman-Linux'>repository</a> or the <a href='http://www.gnu.org/"
 "licenses/'>GNU licenses page</a>"
 msgstr ""
+"Für den gesamten Lizenztext, besuche das <a href='https://github.com/Arc676/"
+"Farkle-Linux'>Repository</a> oder die <a href='http://www.gnu.org/licenses/'>"
+"\"GNU licenses\" Seite</a>"
 
 #: qml/About.qml:58
 msgid ""
 "<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode'>CC BY-"
 "NC-SA 4.0</a> Assets"
 msgstr ""
+"<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode'>CC BY-"
+"NC-SA 4.0</a> Ressourcen"
 
 #: qml/About.qml:63
 msgid ""
@@ -122,6 +141,11 @@ msgid ""
 "flaticon.com/authors/smalllikeart'>smalllikeart</a> on <a href='https://www."
 "flaticon.com/'>flaticon</a>. Modifications by Arc676/Alessandro Vinciguerra."
 msgstr ""
+"Anwendungssymbol und hangman-Zustände basierend auf <a href='https://www."
+"flaticon.com/free-icon/hangman-game_2241186?"
+"term=hangman&page=1&position=6'>dieses Bild</a> von <a href='https://www."
+"flaticon.com/authors/smalllikeart'>smalllikeart</a> auf <a href='https://www."
+"flaticon.com/'>flaticon</a>. Änderungen von Arc676/Alessandro Vinciguerra."
 
 #: qml/About.qml:67
 msgid "Word Lists"
@@ -131,14 +155,17 @@ msgstr "Wortlisten"
 msgid ""
 "US English word list <a href='http://wordlist.aspell.net/12dicts/'>2of12</a> "
 "compiled by Alan Beale and released into the public domain."
-msgstr ""
+msgstr "US-englische Wortliste <a href='http://wordlist.aspell.net/12dicts/'>2of12</a> "
+"kompiliert von Alan Beale und in die Gemeinfreiheit entlassen."
 
 #: qml/About.qml:76
 msgid ""
 "Elements of the periodic table (until 118 Oganesson) in US spelling compiled "
 "by Arc676/Alessandro Vinciguerra available under <a href='https://"
 "creativecommons.org/share-your-work/public-domain/cc0/'>CC0</a>."
-msgstr ""
+msgstr "Elemente des Periodensystems (bis 118 Oganesson) in US-englischer Rechtschreibung kompiliert von "
+"Arc676/Alessandro Vinciguerra verfügbar unter <a href='https://"
+"creativecommons.org/share-your-work/public-domain/cc0/'>CC0</a>."
 
 #: qml/About.qml:80
 msgid ""
@@ -147,14 +174,18 @@ msgid ""
 "The list is available for free for personal or commercial use. Countries "
 "with spaces and special characters were removed for compatibility reasons."
 msgstr ""
+"Ein-Wort-Landnamen erhalten von <a href='https://textlists.info/"
+"geography/countries-of-the-world/'>TextLISTS</a>. Diese Liste ist für persönliche oder "
+"kommerzielle Verwendung frei. Länder, deren Namen Leer- und Sonderzeichen enthalten, "
+"wurden aus Kompatibilitätsgründen entfernt."
 
 #: qml/ImportPage.qml:24
 msgid "Import Word List From..."
-msgstr "Wörterliste Importieren Aus..."
+msgstr "Wortliste Importieren Aus..."
 
 #: qml/DefaultHeader.qml:22
 msgid "Hangman"
-msgstr ""
+msgstr "Galgenmännchen"
 
 #: qml/DefaultHeader.qml:29
 msgid "New from word list"
