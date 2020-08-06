@@ -1,0 +1,173 @@
+# German translation for Hangman
+# Copyright (C) 2020 Arc676/Alessandro Vinciguerra
+# This file is distributed under the same license as the hangman.arc676 package.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hangman.arc676\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-06 19:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Arc676\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.1.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: qml/WordInputDialog.qml:27
+msgid "New Game"
+msgstr "Neues Spiel"
+
+#: qml/WordInputDialog.qml:28
+msgid "Enter secret word"
+msgstr "Geheimes Wort eingeben"
+
+#: qml/WordInputDialog.qml:36
+msgid "Start game"
+msgstr "Spiel starten"
+
+#: qml/WordInputDialog.qml:45
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: qml/SettingsPage.qml:59
+msgid "Maximum attempts"
+msgstr "Maximale Versuche"
+
+#: qml/SettingsPage.qml:71
+msgid ""
+"(Note that the number of graphically displayable Hangman states is always 8.)"
+msgstr ""
+"(Bemerken Sie, dass am meistens immer nur 8 Zustände graphisch dargestellt "
+"werden können.)"
+
+#: qml/SettingsPage.qml:76
+msgid "Use provided word list"
+msgstr "Vorgegebene Wortliste verwenden"
+
+#: qml/SettingsPage.qml:114
+msgid "Import a newline separated word list..."
+msgstr "Liste von durch neue Zeilen getrennten Wörtern importieren..."
+
+#: qml/SettingsPage.qml:120
+msgid "Imported file: "
+msgstr "Importierte Datei: "
+
+#: qml/GamePage.qml:71
+msgid "Word contains invalid characters"
+msgstr "Wort enthält unzulässige Zeichen"
+
+#: qml/GamePage.qml:78
+msgid "An error occurred while creating the game."
+msgstr "Spielerzeugung ist fehlgeschlagen."
+
+#: qml/GamePage.qml:85
+msgid "Please import a word list or use one of the provided lists."
+msgstr ""
+"Bitte eine Wortliste importieren oder eine vorgegebene Liste verwenden"
+
+#: qml/GamePage.qml:139
+msgid "No game in progress"
+msgstr "Kein Spiel läuft"
+
+#: qml/ErrorDialog.qml:27
+msgid "Error"
+msgstr "Fehler"
+
+#: qml/ErrorDialog.qml:32
+msgid "OK"
+msgstr "OK"
+
+#: qml/About.qml:42
+msgid "written by Arc676/Alessandro Vinciguerra. Project available under"
+msgstr ""
+
+#: qml/About.qml:46
+msgid ""
+"This program is free software: you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation (version 3)."
+msgstr ""
+
+#: qml/About.qml:50
+msgid ""
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for "
+"more details."
+msgstr ""
+
+#: qml/About.qml:54
+msgid ""
+"For the full license text, visit the <a href='https://github.com/Arc676/"
+"Hangman-Linux'>repository</a> or the <a href='http://www.gnu.org/"
+"licenses/'>GNU licenses page</a>"
+msgstr ""
+
+#: qml/About.qml:58
+msgid ""
+"<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode'>CC BY-"
+"NC-SA 4.0</a> Assets"
+msgstr ""
+
+#: qml/About.qml:63
+msgid ""
+"Application icon and hangman states adapted from <a href='https://www."
+"flaticon.com/free-icon/hangman-game_2241186?"
+"term=hangman&page=1&position=6'>this image</a> by <a href='https://www."
+"flaticon.com/authors/smalllikeart'>smalllikeart</a> on <a href='https://www."
+"flaticon.com/'>flaticon</a>. Modifications by Arc676/Alessandro Vinciguerra."
+msgstr ""
+
+#: qml/About.qml:67
+msgid "Word Lists"
+msgstr "Wortlisten"
+
+#: qml/About.qml:72
+msgid ""
+"US English word list <a href='http://wordlist.aspell.net/12dicts/'>2of12</a> "
+"compiled by Alan Beale and released into the public domain."
+msgstr ""
+
+#: qml/About.qml:76
+msgid ""
+"Elements of the periodic table (until 118 Oganesson) in US spelling compiled "
+"by Arc676/Alessandro Vinciguerra available under <a href='https://"
+"creativecommons.org/share-your-work/public-domain/cc0/'>CC0</a>."
+msgstr ""
+
+#: qml/About.qml:80
+msgid ""
+"One word country names obtained from <a href='https://textlists.info/"
+"geography/countries-of-the-world/'>TextLISTS</a>'s list of all countries. "
+"The list is available for free for personal or commercial use. Countries "
+"with spaces and special characters were removed for compatibility reasons."
+msgstr ""
+
+#: qml/ImportPage.qml:24
+msgid "Import Word List From..."
+msgstr "Wörterliste Importieren Aus..."
+
+#: qml/DefaultHeader.qml:22
+msgid "Hangman"
+msgstr ""
+
+#: qml/DefaultHeader.qml:29
+msgid "New from word list"
+msgstr "Neu von Wortliste"
+
+#: qml/DefaultHeader.qml:35
+msgid "New game"
+msgstr "Neues Spiel"
+
+#: qml/DefaultHeader.qml:41
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: qml/DefaultHeader.qml:47
+msgid "About"
+msgstr "Über"

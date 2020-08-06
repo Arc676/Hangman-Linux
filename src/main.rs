@@ -22,14 +22,12 @@ extern crate cpp;
 extern crate qmetaobject;
 
 use qmetaobject::*;
-
+use gettextrs::{bindtextdomain, textdomain};
 use std::path::Path;
 use std::env;
 use std::path::PathBuf;
 
 use hangman::hangman::Hangman;
-
-use gettextrs::{bindtextdomain, textdomain};
 
 mod qrc;
 
