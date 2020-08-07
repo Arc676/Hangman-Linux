@@ -35,7 +35,7 @@ Dialog {
 		id: confirm
 		text: i18n.tr("Start game")
 		onClicked: {
-			dialog.startGame(wordField.text)
+			dialog.startGame(wordField.displayText.trim())
 			PopupUtils.close(dialog)
 		}
 	}
