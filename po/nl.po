@@ -1,0 +1,218 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-08 10:22+0000\n"
+"PO-Revision-Date: 2020-08-08 13:09+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl\n"
+
+#: qml/WordInputDialog.qml:27
+msgid "New Game"
+msgstr "Nieuw spel"
+
+#: qml/WordInputDialog.qml:28
+msgid "Enter secret word"
+msgstr "Voer het geheime woord in"
+
+#: qml/WordInputDialog.qml:36
+msgid "Start game"
+msgstr "Spelen"
+
+#: qml/WordInputDialog.qml:45
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: qml/SettingsPage.qml:59
+msgid "Maximum attempts"
+msgstr "Maximum aantal pogingen"
+
+#: qml/SettingsPage.qml:71
+msgid ""
+"(Note that the number of graphically displayable Hangman states is always 8.)"
+msgstr ""
+"(let op: je kunt een hoog getal invoeren, maar de man aan de galg kent "
+"slechts 8 vaste posities)"
+
+#: qml/SettingsPage.qml:76
+msgid "Use provided word list"
+msgstr "Meegeleverde woordenlijst gebruiken"
+
+#: qml/SettingsPage.qml:112
+msgid ""
+"Word lists must be a newline-separated list of words. There should be no "
+"trailing newline."
+msgstr ""
+"Woordenlijsten moeten regelgescheiden lijst met woorden bevatten en geen "
+"witregel aan het eind."
+
+#: qml/SettingsPage.qml:119
+msgid "Import word list..."
+msgstr "Woordenlijst importeren..."
+
+#: qml/SettingsPage.qml:125
+msgid "Imported file: "
+msgstr "Geïmporteerd bestand: "
+
+#: qml/GamePage.qml:48
+msgid "You win! The word was \"%1\"."
+msgstr "Je hebt gewonnen! Het woord was \"%1\"."
+
+#: qml/GamePage.qml:50
+msgid "Game over. The word was \"%1\"."
+msgstr "Je hebt verloren. Het woord was \"%1\"."
+
+#: qml/GamePage.qml:74
+msgid "Word contains invalid characters"
+msgstr "Het woord bevat ongeldige tekens"
+
+#: qml/GamePage.qml:81
+msgid "An error occurred while creating the game."
+msgstr "Er is een fout opgetreden tijdens het opzetten van het spel."
+
+#: qml/GamePage.qml:88
+msgid "Please import a word list or use one of the provided lists."
+msgstr "Importeer een woordenlijst of kies één van de meegeleverde."
+
+#: qml/GamePage.qml:142
+msgid "No game in progress"
+msgstr "Er is geen onderbroken spel"
+
+#: qml/ErrorDialog.qml:27
+msgid "Error"
+msgstr "Fout"
+
+#: qml/ErrorDialog.qml:32
+msgid "OK"
+msgstr "Oké"
+
+#: qml/About.qml:42
+msgid "written by Arc676/Alessandro Vinciguerra. Project available under"
+msgstr ""
+"Gemaakt door Arc676/Alessandro Vinciguerra en beschikbaar gesteld onder de"
+
+#: qml/About.qml:46
+msgid ""
+"This program is free software: you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation (version 3)."
+msgstr ""
+"Dit programma is vrije software. Je mag het heruitgeven en/of aanpassen "
+"onder de voorwaarden van de GNU General Public License, zolas gepubliceerd "
+"door de Free Software Foundation (versie 3)."
+
+#: qml/About.qml:50
+msgid ""
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for "
+"more details."
+msgstr ""
+"This program is distributed in the hope that it will be useful, but WITHOUT "
+"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
+"FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for "
+"more details."
+
+#: qml/About.qml:54
+msgid ""
+"For the full license text, visit the <a href='https://github.com/Arc676/"
+"Hangman-Linux'>repository</a> or the <a href='http://www.gnu.org/"
+"licenses/'>GNU licenses page</a>"
+msgstr ""
+"Ga naar de <a href='https://github.com/Arc676/Hangman-Linux'>repo</a> of <a "
+"href='http://www.gnu.org/licenses/'>GNU-licentiespagina</a> om de volledige "
+"licentietekst te lezen."
+
+#: qml/About.qml:58
+msgid ""
+"<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode'>CC BY-"
+"NC-SA 4.0</a> Assets"
+msgstr ""
+"<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode'>CC BY-"
+"NC-SA 4.0</a>-objecten"
+
+#: qml/About.qml:63
+msgid ""
+"Application icon and hangman states adapted from <a href='https://www."
+"flaticon.com/free-icon/hangman-game_2241186?"
+"term=hangman&page=1&position=6'>this image</a> by <a href='https://www."
+"flaticon.com/authors/smalllikeart'>smalllikeart</a> on <a href='https://www."
+"flaticon.com/'>flaticon</a>. Modifications by Arc676/Alessandro Vinciguerra."
+msgstr ""
+"Het spelpictogram en de galgjeposities zijn overgenomen van <a href='https://"
+"www.flaticon.com/free-icon/hangman-game_2241186?"
+"term=hangman&page=1&position=6'>deze afbeelding</a> van <a href='https://www."
+"flaticon.com/authors/smalllikeart'>smalllikeart</a> op <a href='https://www."
+"flaticon.com/'>flaticon</a>, en bevat aanpassingen van Arc676/Alessandro "
+"Vinciguerra."
+
+#: qml/About.qml:67
+msgid "Word Lists"
+msgstr "Woordenlijsten"
+
+#: qml/About.qml:72
+msgid ""
+"US English word list <a href='http://wordlist.aspell.net/12dicts/'>2of12</a> "
+"compiled by Alan Beale and released into the public domain."
+msgstr ""
+"Amerikaans-Engelse woordenlijst <a href='http://wordlist.aspell."
+"net/12dicts/'>2of12</a>, samengesteld door Alan Beale en uitgebracht op het "
+"publieke domein."
+
+#: qml/About.qml:76
+msgid ""
+"Elements of the periodic table (until 118 Oganesson) in US spelling compiled "
+"by Arc676/Alessandro Vinciguerra available under <a href='https://"
+"creativecommons.org/share-your-work/public-domain/cc0/'>CC0</a>."
+msgstr ""
+"Elementen van het periodiek systeem (tot 118 Oganesson) in de Amerikaanse "
+"spellingswijze, samengesteld door Arc676/Alessandro Vinciguerra en "
+"uitgebracht onder de <a href='https://creativecommons.org/share-your-work/"
+"public-domain/cc0/'>CC0</a>-licentie."
+
+#: qml/About.qml:80
+msgid ""
+"One word country names obtained from <a href='https://textlists.info/"
+"geography/countries-of-the-world/'>TextLISTS</a>'s list of all countries. "
+"The list is available for free for personal or commercial use. Countries "
+"with spaces and special characters were removed for compatibility reasons."
+msgstr ""
+"Landnamen bestaande uit één woord, overgenomen van <a href='https://"
+"textlists.info/geography/countries-of-the-world/'>TextLISTS</a>' "
+"landenlijst. De lijst is gratis te gebruiken, zowel zakelijk als privé. "
+"Landnamen met spaties en speciale tekens zijn bewust weggelaten."
+
+#: qml/ImportPage.qml:24
+msgid "Import Word List From..."
+msgstr "Woordenlijst importeren uit..."
+
+#: qml/DefaultHeader.qml:22
+msgid "Hangman"
+msgstr "Galgje"
+
+#: qml/DefaultHeader.qml:29
+msgid "New from word list"
+msgstr "Nieuw uit woordenlijst"
+
+#: qml/DefaultHeader.qml:35
+msgid "New game"
+msgstr "Nieuw spel"
+
+#: qml/DefaultHeader.qml:41
+msgid "Settings"
+msgstr "Instellingen"
+
+#: qml/DefaultHeader.qml:47
+msgid "About"
+msgstr "Over"
