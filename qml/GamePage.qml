@@ -41,11 +41,10 @@ Page {
 			} else {
 				var feedback = ""
 				if (backend.get_attempts() < backend.get_max_attempts()) {
-					feedback = "You win!"
+					feedback = i18n.tr("You win! The word was \"%1\".").arg(backend.get_secret())
 				} else {
-					feedback = "Game over."
+					feedback = i18n.tr("Game over. The word was \"%1\".").arg(backend.get_secret())
 				}
-				feedback += " The word was \"" + backend.get_secret() + "\"."
 				stateLabel.text = feedback
 			}
 		}

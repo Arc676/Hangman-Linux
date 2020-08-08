@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-07 07:23+0000\n"
+"POT-Creation-Date: 2020-08-08 10:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -60,19 +60,27 @@ msgstr ""
 msgid "Imported file: "
 msgstr ""
 
-#: qml/GamePage.qml:71
+#: qml/GamePage.qml:44
+msgid "You win! The word was \"%1\"."
+msgstr ""
+
+#: qml/GamePage.qml:46
+msgid "Game over. The word was \"%1\"."
+msgstr ""
+
+#: qml/GamePage.qml:70
 msgid "Word contains invalid characters"
 msgstr ""
 
-#: qml/GamePage.qml:78
+#: qml/GamePage.qml:77
 msgid "An error occurred while creating the game."
 msgstr ""
 
-#: qml/GamePage.qml:85
+#: qml/GamePage.qml:84
 msgid "Please import a word list or use one of the provided lists."
 msgstr ""
 
-#: qml/GamePage.qml:139
+#: qml/GamePage.qml:138
 msgid "No game in progress"
 msgstr ""
 
