@@ -48,7 +48,7 @@ Rectangle {
 		}
 	}
 
-	Text {
+	Label {
 		id: btnLbl
 		anchors.centerIn: parent
 		text: kbdBtn.buttonText

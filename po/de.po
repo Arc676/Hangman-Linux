@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hangman.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-08 10:04+0000\n"
+"POT-Creation-Date: 2020-08-08 10:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Arc676\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,27 +66,27 @@ msgstr "Wortliste Importieren Aus..."
 msgid "Imported file: "
 msgstr "Importierte Datei: "
 
-#: qml/GamePage.qml:44
+#: qml/GamePage.qml:48
 msgid "You win! The word was \"%1\"."
 msgstr "Sie gewinnen! Das Wort lautete \"%1\"."
 
-#: qml/GamePage.qml:46
+#: qml/GamePage.qml:50
 msgid "Game over. The word was \"%1\"."
 msgstr "Sie verlieren. Das Wort lautete \"%1\"."
 
-#: qml/GamePage.qml:70
+#: qml/GamePage.qml:74
 msgid "Word contains invalid characters"
 msgstr "Wort enthält unzulässige Zeichen"
 
-#: qml/GamePage.qml:77
+#: qml/GamePage.qml:81
 msgid "An error occurred while creating the game."
 msgstr "Spielerzeugung ist fehlgeschlagen."
 
-#: qml/GamePage.qml:84
+#: qml/GamePage.qml:88
 msgid "Please import a word list or use one of the provided lists."
 msgstr "Bitte eine Wortliste importieren oder eine vorgegebene Liste verwenden"
 
-#: qml/GamePage.qml:138
+#: qml/GamePage.qml:142
 msgid "No game in progress"
 msgstr "Kein Spiel läuft"
 

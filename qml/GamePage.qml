@@ -32,7 +32,11 @@ Page {
 		id: backend
 		onState_changed: {
 			var stateIdx = getStateIndex()
-			hangingState.source = "states/state" + stateIdx + ".png"
+			if (theme.name == "Ubuntu.Components.Themes.Ambiance") {
+				hangingState.source = "states/state" + stateIdx + ".png"
+			} else {
+				hangingState.source = "states/state" + stateIdx + "-dark.png"
+			}
 			if (backend.game_ongoing()) {
 				stateLabel.text = backend.get_status().replace(/_/g, "_ ")
 				if (backend.get_max_attempts() != 8) {
@@ -125,7 +129,7 @@ Page {
 			rightMargin: isLandscape ? 0 : margin
 		}
 		fillMode: Image.PreserveAspectFit
-		source: "states/state8.png"
+		source: theme.name == "Ubuntu.Components.Themes.Ambiance" ? "states/state8.png" : "states/state8-dark.png"
 	}
 
 	Label {
