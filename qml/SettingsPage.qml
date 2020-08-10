@@ -101,7 +101,7 @@ Page {
 			model: [
 				"Alan Beale's US English 2of12",
 				"Elements of the Periodic Table (US)",
-				"Single Word Country Names (English)",
+				"Country Names (English)",
 			]
 			expanded: false
 			onDelegateClicked: settings.wordlist = listSelector.paths[index]

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-08 10:22+0000\n"
+"POT-Creation-Date: 2020-08-10 17:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -152,10 +152,10 @@ msgstr ""
 
 #: qml/About.qml:80
 msgid ""
-"One word country names obtained from <a href='https://textlists.info/"
-"geography/countries-of-the-world/'>TextLISTS</a>'s list of all countries. "
-"The list is available for free for personal or commercial use. Countries "
-"with spaces and special characters were removed for compatibility reasons."
+"Country names obtained from <a href='https://textlists.info/geography/"
+"countries-of-the-world/'>TextLISTS</a>'s list of all countries. The list is "
+"available for free for personal or commercial use. Countries with special "
+"characters were removed for compatibility reasons."
 msgstr ""
 
 #: qml/ImportPage.qml:24

@@ -77,7 +77,7 @@ Page {
 			}
 
 			WrappingLabel {
-				text: i18n.tr("One word country names obtained from <a href='https://textlists.info/geography/countries-of-the-world/'>TextLISTS</a>'s list of all countries. The list is available for free for personal or commercial use. Countries with spaces and special characters were removed for compatibility reasons.")
+				text: i18n.tr("Country names obtained from <a href='https://textlists.info/geography/countries-of-the-world/'>TextLISTS</a>'s list of all countries. The list is available for free for personal or commercial use. Countries with special characters were removed for compatibility reasons.")
 			}
 		}
 	}
