@@ -38,7 +38,7 @@ Page {
 				hangingState.source = "states/state" + stateIdx + "-dark.png"
 			}
 			if (backend.game_ongoing()) {
-				stateLabel.text = backend.get_status().replace(/_/g, "_ ")
+				stateLabel.text = backend.get_status().replace(/ /g, "  ").replace(/_/g, "_ ")
 				if (backend.get_max_attempts() != 8) {
 					stateLabel.text += "  (" + (backend.get_max_attempts() - backend.get_attempts()) + " attempts remaining)"
 				}
@@ -132,14 +132,15 @@ Page {
 		source: theme.name == "Ubuntu.Components.Themes.Ambiance" ? "states/state8.png" : "states/state8-dark.png"
 	}
 
-	Label {
+	WrappingLabel {
 		id: stateLabel
 		anchors {
+			left: parent.left
+			right: isLandscape ? parent.horizontalCenter : parent.right
 			top: hangingState.bottom
-			bottomMargin: margin
-			horizontalCenter: hangingState.horizontalCenter
 		}
 		text: i18n.tr("No game in progress")
+		horizontalAlignment: Text.AlignHCenter
 	}
 
 	Column {
