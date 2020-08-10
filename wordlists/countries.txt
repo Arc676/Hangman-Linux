@@ -3,11 +3,13 @@ albania
 algeria
 andorra
 angola
+antigua and barbuda
 argentina
 armenia
 australia
 austria
 azerbaijan
+the bahamas
 bahrain
 bangladesh
 barbados
@@ -17,27 +19,38 @@ belize
 benin
 bhutan
 bolivia
+bosnia and herzegovina
 botswana
 brazil
 brunei
 bulgaria
+burkina faso
 burundi
 cambodia
 cameroon
 canada
+cape verde
+central african republic
 chad
 chile
 china
 colombia
 comoros
+republic of the congo
+democratic republic of the congo
+costa rica
 croatia
 cuba
 cyprus
+czech republic
 denmark
 djibouti
 dominica
+dominican republic
 ecuador
 egypt
+el salvador
+equatorial guinea
 eritrea
 estonia
 ethiopia
@@ -45,6 +58,7 @@ fiji
 finland
 france
 gabon
+the gambia
 georgia
 germany
 ghana
@@ -70,6 +84,8 @@ jordan
 kazakhstan
 kenya
 kiribati
+north korea
+south korea
 kosovo
 kuwait
 kyrgyzstan
@@ -89,9 +105,11 @@ malaysia
 maldives
 mali
 malta
+marshall islands
 mauritania
 mauritius
 mexico
+federated states of micronesia
 moldova
 monaco
 mongolia
@@ -102,6 +120,7 @@ namibia
 nauru
 nepal
 netherlands
+new zealand
 nicaragua
 niger
 nigeria
@@ -110,6 +129,7 @@ oman
 pakistan
 palau
 panama
+papua new guinea
 paraguay
 peru
 philippines
@@ -119,15 +139,26 @@ qatar
 romania
 russia
 rwanda
+saint kitts and nevis
+saint lucia
+saint vincent and the grenadines
 samoa
+san marino
+sao tome and principe
+saudi arabia
 senegal
 serbia
 seychelles
+sierra leone
 singapore
 slovakia
 slovenia
+solomon islands
 somalia
+south africa
+south sudan
 spain
+sri lanka
 sudan
 suriname
 swaziland
@@ -140,12 +171,16 @@ tanzania
 thailand
 togo
 tonga
+trinidad and tobago
 tunisia
 turkey
 turkmenistan
 tuvalu
 uganda
 ukraine
+united arab emirates
+united kingdom
+united states of america
 uruguay
 uzbekistan
 vanuatu
