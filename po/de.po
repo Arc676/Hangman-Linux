@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hangman.arc676\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-10 18:08+0000\n"
+"POT-Creation-Date: 2026-03-16 20:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Arc676\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.1.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: qml/ImportPage.qml:24
+msgid "Import Word List From..."
+msgstr "Wortliste Importieren Aus..."
+
+#: qml/DefaultHeader.qml:22
+msgid "Hangman"
+msgstr "Galgenmännchen"
+
+#: qml/DefaultHeader.qml:29
+msgid "New from word list"
+msgstr "Neu von Wortliste"
+
+#: qml/DefaultHeader.qml:35
+msgid "New game"
+msgstr "Neues Spiel"
+
+#: qml/DefaultHeader.qml:41
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: qml/DefaultHeader.qml:47
+msgid "About"
+msgstr "Über"
+
+#: qml/ErrorDialog.qml:27
+msgid "Error"
+msgstr "Fehler"
+
+#: qml/ErrorDialog.qml:32
+msgid "OK"
+msgstr "OK"
 
 #: qml/WordInputDialog.qml:27
 msgid "New Game"
@@ -33,70 +65,6 @@ msgstr "Spiel starten"
 #: qml/WordInputDialog.qml:45
 msgid "Cancel"
 msgstr "Abbrechen"
-
-#: qml/SettingsPage.qml:59
-msgid "Maximum attempts"
-msgstr "Maximale Versuche"
-
-#: qml/SettingsPage.qml:71
-msgid ""
-"(Note that the number of graphically displayable Hangman states is always 8.)"
-msgstr ""
-"(Bemerken Sie, dass am meistens immer nur 8 Zustände graphisch dargestellt "
-"werden können.)"
-
-#: qml/SettingsPage.qml:76
-msgid "Use provided word list"
-msgstr "Vorgegebene Wortliste verwenden"
-
-#: qml/SettingsPage.qml:112
-msgid ""
-"Word lists must be a newline-separated list of words. There should be no "
-"trailing newline."
-msgstr ""
-"Wortlisten müssen eine Liste von durch neue Zeilen getrennten Wörtern sein. "
-"Es sollte keine neue Zeile am Ende geben."
-
-#: qml/SettingsPage.qml:119
-#, fuzzy
-msgid "Import word list..."
-msgstr "Wortliste Importieren Aus..."
-
-#: qml/SettingsPage.qml:125
-msgid "Imported file: "
-msgstr "Importierte Datei: "
-
-#: qml/GamePage.qml:48
-msgid "You win! The word was \"%1\"."
-msgstr "Sie gewinnen! Das Wort lautete \"%1\"."
-
-#: qml/GamePage.qml:50
-msgid "Game over. The word was \"%1\"."
-msgstr "Sie verlieren. Das Wort lautete \"%1\"."
-
-#: qml/GamePage.qml:74
-msgid "Word contains invalid characters"
-msgstr "Wort enthält unzulässige Zeichen"
-
-#: qml/GamePage.qml:81
-msgid "An error occurred while creating the game."
-msgstr "Spielerzeugung ist fehlgeschlagen."
-
-#: qml/GamePage.qml:88
-msgid "Please import a word list or use one of the provided lists."
-msgstr "Bitte eine Wortliste importieren oder eine vorgegebene Liste verwenden"
-
-#: qml/GamePage.qml:142
-msgid "No game in progress"
-msgstr "Kein Spiel läuft"
-
-#: qml/ErrorDialog.qml:27
-msgid "Error"
-msgstr "Fehler"
-
-#: qml/ErrorDialog.qml:32
-msgid "OK"
-msgstr "OK"
 
 #: qml/About.qml:42
 msgid "written by Arc676/Alessandro Vinciguerra. Project available under"
@@ -192,26 +160,58 @@ msgstr ""
 "kommerzielle Verwendung frei. Länder, deren Namen Sonderzeichen enthalten, "
 "wurden aus Kompatibilitätsgründen entfernt."
 
-#: qml/ImportPage.qml:24
-msgid "Import Word List From..."
+#: qml/SettingsPage.qml:59
+msgid "Maximum attempts"
+msgstr "Maximale Versuche"
+
+#: qml/SettingsPage.qml:71
+msgid ""
+"(Note that the number of graphically displayable Hangman states is always 8.)"
+msgstr ""
+"(Bemerken Sie, dass am meistens immer nur 8 Zustände graphisch dargestellt "
+"werden können.)"
+
+#: qml/SettingsPage.qml:76
+msgid "Use provided word list"
+msgstr "Vorgegebene Wortliste verwenden"
+
+#: qml/SettingsPage.qml:112
+msgid ""
+"Word lists must be a newline-separated list of words. There should be no "
+"trailing newline."
+msgstr ""
+"Wortlisten müssen eine Liste von durch neue Zeilen getrennten Wörtern sein. "
+"Es sollte keine neue Zeile am Ende geben."
+
+#: qml/SettingsPage.qml:119
+#, fuzzy
+msgid "Import word list..."
 msgstr "Wortliste Importieren Aus..."
 
-#: qml/DefaultHeader.qml:22
-msgid "Hangman"
-msgstr "Galgenmännchen"
+#: qml/SettingsPage.qml:125
+msgid "Imported file: "
+msgstr "Importierte Datei: "
 
-#: qml/DefaultHeader.qml:29
-msgid "New from word list"
-msgstr "Neu von Wortliste"
+#: qml/GamePage.qml:48
+msgid "You win! The word was \"%1\"."
+msgstr "Sie gewinnen! Das Wort lautete \"%1\"."
 
-#: qml/DefaultHeader.qml:35
-msgid "New game"
-msgstr "Neues Spiel"
+#: qml/GamePage.qml:50
+msgid "Game over. The word was \"%1\"."
+msgstr "Sie verlieren. Das Wort lautete \"%1\"."
 
-#: qml/DefaultHeader.qml:41
-msgid "Settings"
-msgstr "Einstellungen"
+#: qml/GamePage.qml:74
+msgid "Word contains invalid characters"
+msgstr "Wort enthält unzulässige Zeichen"
 
-#: qml/DefaultHeader.qml:47
-msgid "About"
-msgstr "Über"
+#: qml/GamePage.qml:81
+msgid "An error occurred while creating the game."
+msgstr "Spielerzeugung ist fehlgeschlagen."
+
+#: qml/GamePage.qml:88
+msgid "Please import a word list or use one of the provided lists."
+msgstr "Bitte eine Wortliste importieren oder eine vorgegebene Liste verwenden"
+
+#: qml/GamePage.qml:142
+msgid "No game in progress"
+msgstr "Kein Spiel läuft"

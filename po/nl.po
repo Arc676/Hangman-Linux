@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-10 18:08+0000\n"
+"POT-Creation-Date: 2026-03-16 20:07+0000\n"
 "PO-Revision-Date: 2020-08-08 13:09+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: \n"
@@ -17,6 +17,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: qml/ImportPage.qml:24
+msgid "Import Word List From..."
+msgstr "Woordenlijst importeren uit..."
+
+#: qml/DefaultHeader.qml:22
+msgid "Hangman"
+msgstr "Galgje"
+
+#: qml/DefaultHeader.qml:29
+msgid "New from word list"
+msgstr "Nieuw uit woordenlijst"
+
+#: qml/DefaultHeader.qml:35
+msgid "New game"
+msgstr "Nieuw spel"
+
+#: qml/DefaultHeader.qml:41
+msgid "Settings"
+msgstr "Instellingen"
+
+#: qml/DefaultHeader.qml:47
+msgid "About"
+msgstr "Over"
+
+#: qml/ErrorDialog.qml:27
+msgid "Error"
+msgstr "Fout"
+
+#: qml/ErrorDialog.qml:32
+msgid "OK"
+msgstr "Oké"
 
 #: qml/WordInputDialog.qml:27
 msgid "New Game"
@@ -33,69 +65,6 @@ msgstr "Spelen"
 #: qml/WordInputDialog.qml:45
 msgid "Cancel"
 msgstr "Annuleren"
-
-#: qml/SettingsPage.qml:59
-msgid "Maximum attempts"
-msgstr "Maximum aantal pogingen"
-
-#: qml/SettingsPage.qml:71
-msgid ""
-"(Note that the number of graphically displayable Hangman states is always 8.)"
-msgstr ""
-"(let op: je kunt een hoog getal invoeren, maar de man aan de galg kent "
-"slechts 8 vaste posities)"
-
-#: qml/SettingsPage.qml:76
-msgid "Use provided word list"
-msgstr "Meegeleverde woordenlijst gebruiken"
-
-#: qml/SettingsPage.qml:112
-msgid ""
-"Word lists must be a newline-separated list of words. There should be no "
-"trailing newline."
-msgstr ""
-"Woordenlijsten moeten regelgescheiden lijst met woorden bevatten en geen "
-"witregel aan het eind."
-
-#: qml/SettingsPage.qml:119
-msgid "Import word list..."
-msgstr "Woordenlijst importeren..."
-
-#: qml/SettingsPage.qml:125
-msgid "Imported file: "
-msgstr "Geïmporteerd bestand: "
-
-#: qml/GamePage.qml:48
-msgid "You win! The word was \"%1\"."
-msgstr "Je hebt gewonnen! Het woord was \"%1\"."
-
-#: qml/GamePage.qml:50
-msgid "Game over. The word was \"%1\"."
-msgstr "Je hebt verloren. Het woord was \"%1\"."
-
-#: qml/GamePage.qml:74
-msgid "Word contains invalid characters"
-msgstr "Het woord bevat ongeldige tekens"
-
-#: qml/GamePage.qml:81
-msgid "An error occurred while creating the game."
-msgstr "Er is een fout opgetreden tijdens het opzetten van het spel."
-
-#: qml/GamePage.qml:88
-msgid "Please import a word list or use one of the provided lists."
-msgstr "Importeer een woordenlijst of kies één van de meegeleverde."
-
-#: qml/GamePage.qml:142
-msgid "No game in progress"
-msgstr "Er is geen onderbroken spel"
-
-#: qml/ErrorDialog.qml:27
-msgid "Error"
-msgstr "Fout"
-
-#: qml/ErrorDialog.qml:32
-msgid "OK"
-msgstr "Oké"
 
 #: qml/About.qml:42
 msgid "written by Arc676/Alessandro Vinciguerra. Project available under"
@@ -193,26 +162,57 @@ msgstr ""
 "gebruiken, zowel zakelijk als privé. Landnamen met speciale tekens zijn "
 "bewust weggelaten."
 
-#: qml/ImportPage.qml:24
-msgid "Import Word List From..."
-msgstr "Woordenlijst importeren uit..."
+#: qml/SettingsPage.qml:59
+msgid "Maximum attempts"
+msgstr "Maximum aantal pogingen"
 
-#: qml/DefaultHeader.qml:22
-msgid "Hangman"
-msgstr "Galgje"
+#: qml/SettingsPage.qml:71
+msgid ""
+"(Note that the number of graphically displayable Hangman states is always 8.)"
+msgstr ""
+"(let op: je kunt een hoog getal invoeren, maar de man aan de galg kent "
+"slechts 8 vaste posities)"
 
-#: qml/DefaultHeader.qml:29
-msgid "New from word list"
-msgstr "Nieuw uit woordenlijst"
+#: qml/SettingsPage.qml:76
+msgid "Use provided word list"
+msgstr "Meegeleverde woordenlijst gebruiken"
 
-#: qml/DefaultHeader.qml:35
-msgid "New game"
-msgstr "Nieuw spel"
+#: qml/SettingsPage.qml:112
+msgid ""
+"Word lists must be a newline-separated list of words. There should be no "
+"trailing newline."
+msgstr ""
+"Woordenlijsten moeten regelgescheiden lijst met woorden bevatten en geen "
+"witregel aan het eind."
 
-#: qml/DefaultHeader.qml:41
-msgid "Settings"
-msgstr "Instellingen"
+#: qml/SettingsPage.qml:119
+msgid "Import word list..."
+msgstr "Woordenlijst importeren..."
 
-#: qml/DefaultHeader.qml:47
-msgid "About"
-msgstr "Over"
+#: qml/SettingsPage.qml:125
+msgid "Imported file: "
+msgstr "Geïmporteerd bestand: "
+
+#: qml/GamePage.qml:48
+msgid "You win! The word was \"%1\"."
+msgstr "Je hebt gewonnen! Het woord was \"%1\"."
+
+#: qml/GamePage.qml:50
+msgid "Game over. The word was \"%1\"."
+msgstr "Je hebt verloren. Het woord was \"%1\"."
+
+#: qml/GamePage.qml:74
+msgid "Word contains invalid characters"
+msgstr "Het woord bevat ongeldige tekens"
+
+#: qml/GamePage.qml:81
+msgid "An error occurred while creating the game."
+msgstr "Er is een fout opgetreden tijdens het opzetten van het spel."
+
+#: qml/GamePage.qml:88
+msgid "Please import a word list or use one of the provided lists."
+msgstr "Importeer een woordenlijst of kies één van de meegeleverde."
+
+#: qml/GamePage.qml:142
+msgid "No game in progress"
+msgstr "Er is geen onderbroken spel"
