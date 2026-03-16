@@ -1,8 +1,10 @@
 clickable_minimum_required: 8.4
 builder: rust
 kill: hangman
-install_data:
-  ${ROOT}/manifest.json: ${INSTALL_DIR}
-  ${ROOT}/hangman.apparmor: ${INSTALL_DIR}
-  ${ROOT}/hangman.desktop: ${INSTALL_DIR}
-  ${ROOT}/assets: ${INSTALL_DIR}
+install_root_data:
+  - manifest.json
+  - hangman-content.json
+  - hangman.apparmor
+  - hangman.desktop
+  - assets
+  - wordlists
