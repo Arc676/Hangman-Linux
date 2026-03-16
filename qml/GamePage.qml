@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.7
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 
 import HangmanBackend 1.0
 
@@ -32,7 +32,7 @@ Page {
 		id: backend
 		onState_changed: {
 			var stateIdx = getStateIndex()
-			if (theme.name == "Ubuntu.Components.Themes.Ambiance") {
+			if (theme.name == "Lomiri.Components.Themes.Ambiance") {
 				hangingState.source = "states/state" + stateIdx + ".png"
 			} else {
 				hangingState.source = "states/state" + stateIdx + "-dark.png"

@@ -1,16 +1,16 @@
 {
-    "name": "hangman.arc676",
-    "description": "An implementation of the popular game Hangman",
-    "architecture": "@CLICK_ARCH@",
-    "title": "Hangman",
-    "hooks": {
-        "hangman": {
-            "apparmor": "hangman.apparmor",
-            "content-hub": "hangman-content.json",
-            "desktop":  "hangman.desktop"
-        }
-    },
-    "version": "1.2.0",
-    "maintainer": "Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>",
-    "framework" : "ubuntu-sdk-16.04"
+  "name": "hangman.arc676",
+  "description": "An implementation of the popular game Hangman",
+  "architecture": "@CLICK_ARCH@",
+  "title": "Hangman",
+  "hooks": {
+    "hangman": {
+      "apparmor": "hangman.apparmor",
+      "content-hub": "hangman-content.json",
+      "desktop": "hangman.desktop"
+    }
+  },
+  "version": "1.2.0",
+  "maintainer": "Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>",
+  "framework": "ubuntu-sdk-20.04"
 }
