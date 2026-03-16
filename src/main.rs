@@ -99,7 +99,7 @@ struct HangmanBackend {
 
 fn init_gettext() {
 	let domain = "hangman.arc676";
-	textdomain(domain);
+	let _ = textdomain(domain);
 
 	let app_dir = env::var("APP_DIR").expect("Failed to read the APP_DIR environment variable");
 
@@ -110,7 +110,7 @@ fn init_gettext() {
 
 	let path = app_dir_path.join("share/locale");
 
-	bindtextdomain(domain, path.to_str().unwrap());
+	let _ = bindtextdomain(domain, path.to_str().unwrap());
 }
 
 fn main() {
