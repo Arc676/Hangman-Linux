@@ -2,15 +2,15 @@
 name = "hangman"
 version = "1.0.0"
 authors = ["Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>"]
-edition = "2018"
+edition = "2024"
 build = "src/build.rs"
 
 [dependencies]
-qmetaobject = "0.1.4"
-cstr = "0.1.0"
-cpp = "0.4"
 Rustic_Hangman = "0.1.1"
-gettext-rs = "0.4"
+qmetaobject = "0.2.9"
+gettext-rs = "0.7"
+cstr = "0.2.11"
+cpp = "0.5"
 
 [build-dependencies]
-cpp_build = "0.4"
+cpp_build = "0.5"
