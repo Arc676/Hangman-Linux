@@ -1,6 +1,6 @@
 [package]
 name = "hangman"
-version = "1.0.0"
+version = "1.2.1"
 authors = ["Arc676/Alessandro Vinciguerra <alesvinciguerra@gmail.com>"]
 edition = "2024"
 build = "src/build.rs"
